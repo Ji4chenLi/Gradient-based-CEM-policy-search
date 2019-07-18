@@ -727,3 +727,103 @@ class sepMCEM:
         the mean and sigma
         """
         return np.copy(self.mu), np.copy(self.cov)
+
+
+class pgGES:
+
+    """
+    Policy gradient guided Evolution Strategies
+    """
+
+    def __init__(self, num_params,
+                 mu_init=None,
+                 sigma_init=0.1,
+                 lr=10**-2,
+                 alpha=0.5,
+                 beta=2,
+                 k=1,
+                 pop_size=256,
+                 weight_decay=0,
+                 rank_fitness=False):
+
+        # misc
+        self.num_params = num_params
+        self.first_interation = True
+
+        # distribution parameters
+        if mu_init is None:
+            self.mu = np.zeros(self.num_params)
+        else:
+            self.mu = np.array(mu_init)
+        self.sigma = sigma_init
+        self.U = np.ones((self.num_params, k))
+        self.U = self.U / np.linalg.norm(self.U, axis=0)
+
+        # optimization stuff
+        self.alpha = alpha
+        self.beta = beta
+        self.k = k
+        self.learning_rate = lr
+        self.optimizer = Adam(self.learning_rate)
+
+        # sampling stuff
+        self.pop_size = pop_size
+        assert (self.pop_size % 2 == 0), "Population size must be even"
+
+        self.weight_decay = weight_decay
+        self.rank_fitness = rank_fitness
+
+    def ask(self):
+        """
+        Returns a list of candidates parameterss
+        """
+        epsilon_half = np.sqrt(self.alpha / self.num_params) * \
+            np.random.randn(self.pop_size // 2, self.num_params)
+        epsilon_half += np.sqrt((1 - self.alpha) / self.k) * \
+            np.random.randn(self.pop_size // 2, self.k) @ self.U.T
+        epsilon = np.concatenate([epsilon_half, - epsilon_half])
+
+        return self.mu + epsilon * self.sigma
+
+    def tell(self, solutions, scores):
+        """
+        Updates the distribution
+        """
+        assert(len(scores) ==
+               self.pop_size), "Inconsistent reward_table size reported."
+
+        reward = np.array(scores)
+        if self.rank_fitness:
+            reward = compute_centered_ranks(reward)
+
+        if self.weight_decay > 0:
+            l2_decay = compute_weight_decay(self.weight_decay, solutions)
+            reward += l2_decay
+
+        # epsilon = (solutions - self.mu) / self.sigma
+        # grad = -self.beta/(self.sigma * self.pop_size) * \
+        #     np.dot(reward, epsilon)
+        reward = reward.reshape(-1, 2)
+        grad = np.zeros(self.mu.shape)
+        for i in range(self.pop_size // 2):
+            grad += (reward[i, 0] - reward[i, 1])\
+                    * (solutions[i] - solutions[i + self.pop_size // 2]) / 2
+        grad *= -self.beta / (self.sigma * self.pop_size)
+        # optimization step
+        step = self.optimizer.step(grad)
+        self.mu += step
+
+    def update_u(self, grads):
+        """
+        Update U
+        """
+        grads = grads.reshape(-1, self.k)
+        grads = grads / np.linalg.norm(grads)
+        self.U = grads
+
+    def get_distrib_params(self):
+        """
+        Returns the parameters of the distrubtion:
+        the mean and sigma
+        """
+        return np.copy(self.mu), np.copy(self.sigma ** 2)

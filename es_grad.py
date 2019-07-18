@@ -11,7 +11,7 @@ import gym.spaces
 import numpy as np
 from tqdm import tqdm
 
-from ES import sepCEM, Control
+from ES import sepCEM, Control, pgGES
 from models import RLNN
 from random_process import GaussianNoise, OrnsteinUhlenbeckProcess
 from memory import Memory
@@ -130,13 +130,27 @@ class Actor(RLNN):
         # Optimize the actor
         self.optimizer.zero_grad()
         actor_loss.backward()
-        a = self.l1.gradient()
         self.optimizer.step()
 
         # Update the frozen target models
         for param, target_param in zip(self.parameters(), actor_t.parameters()):
             target_param.data.copy_(
                 self.tau * param.data + (1 - self.tau) * target_param.data)
+
+    def gradients(self, memory, critic):
+        # Sample replay buffer
+        states, _, _, _, _ = memory.sample(1000)
+
+        # Compute actor loss
+        if args.use_td3:
+            actor_loss = -critic(states, self(states))[0].mean()
+        else:
+            actor_loss = -critic(states, self(states)).mean()
+
+        # Optimize the actor
+        self.optimizer.zero_grad()
+        actor_loss.backward()
+        return self.get_grads()
 
 
 class Critic(RLNN):
@@ -382,8 +396,6 @@ if __name__ == "__main__":
 
     # actor
     actor = Actor(state_dim, action_dim, max_action, args)
-    actor_t = Actor(state_dim, action_dim, max_action, args)
-    actor_t.load_state_dict(actor.state_dict())
 
     # action noise
     if not args.ou_noise:
@@ -396,12 +408,9 @@ if __name__ == "__main__":
         critic.cuda()
         critic_t.cuda()
         actor.cuda()
-        actor_t.cuda()
 
-    # CEM
-    es = sepCEM(actor.get_size(), mu_init=actor.get_params(), sigma_init=args.sigma_init, damp=args.damp, damp_limit=args.damp_limit,
-                pop_size=args.pop_size, antithetic=not args.pop_size % 2, parents=args.pop_size // 2, elitism=args.elitism)
-    # es = Control(actor.get_size(), pop_size=args.pop_size, mu_init=actor.get_params())
+    # gradient guided ES
+    es = pgGES(actor.get_size(), mu_init=actor.get_params(), sigma_init=args.sigma_init, pop_size=args.pop_size)
 
     # training
     step_cpt = 0
@@ -413,39 +422,26 @@ if __name__ == "__main__":
 
         fitness = []
         fitness_ = []
-        es_params = es.ask(args.pop_size)
 
-        # udpate the rl actors and the critic
+        # Update the critic
         if total_steps > args.start_steps:
 
-            for i in range(args.n_grad):
+            u = actor.gradients(memory, critic)
+            es.update_u(u)
+            es_params = es.ask()
+            for i in range(args.pop_size):
 
                 # set params
                 actor.set_params(es_params[i])
-                actor_t.set_params(es_params[i])
-                actor.optimizer = torch.optim.Adam(
-                    actor.parameters(), lr=args.actor_lr)
 
                 # critic update
                 for _ in tqdm(range(actor_steps // args.n_grad)):
                     critic.update(memory, args.batch_size, actor, critic_t)
-
-                # actor update
-                for _ in tqdm(range(actor_steps)):
-                    actor.update(memory, args.batch_size,
-                                 critic, actor_t)
-
-                # get the params back in the population
-                es_params[i] = actor.get_params()
+                # Note that we dont need to update actor, cause we regard the
+                # mean of the pgGES as the weights of the actor networks
+        else:
+            es_params = es.ask()
         actor_steps = 0
-
-        # evaluate noisy actor(s)
-        for i in range(args.n_noisy):
-            actor.set_params(es_params[i])
-            f, steps = evaluate(actor, env, memory=memory, n_episodes=args.n_episodes,
-                                render=args.render, noise=a_noise)
-            actor_steps += steps
-            prCyan('Noisy actor {} fitness:{}'.format(i, f))
 
         # evaluate all actors
         for params in es_params:
