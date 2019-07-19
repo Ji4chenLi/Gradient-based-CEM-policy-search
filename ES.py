@@ -779,12 +779,11 @@ class pgGES:
         """
         epsilon_half = np.sqrt(self.alpha / self.num_params) * \
             np.random.randn(self.pop_size // 2, self.num_params)
-        a = np.random.randn(self.pop_size // 2, self.k)
         epsilon_half += np.sqrt((1 - self.alpha) / self.k) * \
             np.random.randn(self.pop_size // 2, self.k) @ self.U.T
         epsilon = np.concatenate([epsilon_half, - epsilon_half])
 
-        return self.mu + epsilon * np.sqrt(self.sigma)
+        return self.mu + epsilon # * np.sqrt(self.sigma)
 
     def tell(self, solutions, scores):
         """
@@ -801,15 +800,17 @@ class pgGES:
             l2_decay = compute_weight_decay(self.weight_decay, solutions)
             reward += l2_decay
 
-        # epsilon = (solutions - self.mu) / self.sigma
-        # grad = -self.beta/(self.sigma * self.pop_size) * \
-        #     np.dot(reward, epsilon)
-        reward = reward.reshape(2, -1).T
-        grad = np.zeros(self.mu.shape)
-        for i in range(self.pop_size // 2):
-            grad += (reward[i, 0] - reward[i, 1])\
-                    * (solutions[i] - solutions[i + self.pop_size // 2]) / 2
-        grad *= self.beta / (self.sigma * self.pop_size)
+        epsilon = (solutions - self.mu) / self.sigma
+        grad = -self.beta/(self.sigma * self.pop_size) * \
+            np.dot(reward, epsilon)
+
+        # reward = reward.reshape(2, -1).T
+        # grad = np.zeros(self.mu.shape)
+        # for i in range(self.pop_size // 2):
+        #     grad += (reward[i, 0] - reward[i, 1])\
+        #             * (solutions[i] - solutions[i + self.pop_size // 2]) / 2
+        # grad *= self.beta / (self.sigma * self.pop_size)
+
         # optimization step
         step = self.optimizer.step(grad)
         self.mu += step
@@ -820,7 +821,8 @@ class pgGES:
         Update U
         """
         grads = grads.reshape(-1, self.k)
-        grads = grads / np.mean(grads)
+        a = np.linalg.norm(grads)
+        grads = grads / np.linalg.norm(grads)
         self.U = grads
 
     def get_distrib_params(self):

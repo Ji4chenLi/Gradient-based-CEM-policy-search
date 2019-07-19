@@ -421,7 +421,6 @@ if __name__ == "__main__":
     while total_steps < args.max_steps:
 
         fitness = []
-        fitness_ = []
 
         # Update the critic
         if total_steps > args.start_steps:
