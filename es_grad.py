@@ -425,7 +425,7 @@ if __name__ == "__main__":
 
         # Update the critic
         if total_steps > args.start_steps:
-
+            actor.set_params(es.mu)
             u = actor.gradients(memory, critic)
             es.update_u(u)
             es_params = es.ask()
