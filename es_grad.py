@@ -434,7 +434,7 @@ if __name__ == "__main__":
                 actor.set_params(es_params[i])
 
                 # critic update
-                for _ in tqdm(range(actor_steps // args.n_grad)):
+                for _ in tqdm(range(1)):
                     critic.update(memory, args.batch_size, actor, critic_t)
                 # Note that we dont need to update actor, cause we regard the
                 # mean of the pgGES as the weights of the actor networks

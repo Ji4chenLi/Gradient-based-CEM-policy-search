@@ -2,126 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="350137d7-6ad0-471b-b3ff-2b076910efd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ES.py" beforeDir="false" afterPath="$PROJECT_DIR$/ES.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/es_grad.py" beforeDir="false" afterPath="$PROJECT_DIR$/es_grad.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run1/actor.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/results/Pendulum-v0-run1/actor.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run1/critic.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/results/Pendulum-v0-run1/critic.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run1/log.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/results/Pendulum-v0-run1/log.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run10/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run10/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run10/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run10/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run11/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run12/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run13/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run14/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run15/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run15/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run15/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run15/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run16/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run16/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run16/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run16/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run17/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run18/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run19/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run2/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run2/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run2/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run20/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run20/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run20/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run20/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run21/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run22/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run22/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run22/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run22/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run23/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run23/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run23/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run23/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run24/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run24/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run24/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run24/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run25/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run25/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run25/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run25/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run26/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run27/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run28/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run29/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run3/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run3/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run3/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run3/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run30/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run30/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run30/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run30/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run31/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run31/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run31/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run31/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run32/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run32/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run32/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run32/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run33/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run33/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run33/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run33/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run34/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run34/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run34/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run34/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run35/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run35/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run35/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run35/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run36/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run36/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run36/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run36/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run37/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run37/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run37/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run37/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run38/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run38/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run38/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run38/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run39/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run39/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run39/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run39/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run4/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run4/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run4/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run4/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run40/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run40/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run40/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run40/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run41/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run41/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run41/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run41/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run42/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run42/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run42/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run42/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run5/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run6/actor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run6/critic.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run6/log.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run6/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run7/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run8/parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Pendulum-v0-run9/parameters.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ES.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="815" selection-start-line="815" selection-end-line="815" />
+            <state relative-caret-position="80">
+              <caret line="747" lean-forward="true" selection-start-line="747" selection-end-line="747" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#880#3160#0" />
@@ -152,10 +33,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/memory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/es_grad.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-141">
-              <caret line="430" selection-start-line="430" selection-end-line="430" />
+            <state relative-caret-position="34">
+              <caret line="109" selection-start-line="109" selection-end-line="109" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
                 <element signature="e#4174#6141#0" />
@@ -203,8 +93,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/es_grad.py" />
         <option value="$PROJECT_DIR$/ES.py" />
+        <option value="$PROJECT_DIR$/es_grad.py" />
       </list>
     </option>
   </component>
@@ -218,7 +108,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-265" />
     <option name="y" value="810" />
     <option name="width" value="3875" />
@@ -331,16 +221,15 @@
       <option name="presentableId" value="Default" />
       <updated>1563407989696</updated>
       <workItem from="1563407993003" duration="11711000" />
-      <workItem from="1563486143094" duration="14487000" />
+      <workItem from="1563486143094" duration="15926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26198000" />
+    <option name="totallyTimeSpent" value="27637000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25318152" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -348,7 +237,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3460452" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.42937854" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.45338982" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -391,20 +280,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ES.py</url>
-          <line>815</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Gradient_based_CEM_policy_search$ES.coverage" NAME="ES Coverage Results" MODIFIED="1563424675395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Gradient_based_CEM_policy_search$es_grad.coverage" NAME="es_grad Coverage Results" MODIFIED="1563507555507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Gradient_based_CEM_policy_search$es_grad.coverage" NAME="es_grad Coverage Results" MODIFIED="1563567015754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -468,13 +346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/memory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -506,22 +377,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/es_grad.py">
+    <entry file="file://$PROJECT_DIR$/memory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-141">
-          <caret line="430" selection-start-line="430" selection-end-line="430" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#4174#6141#0" />
-            <element signature="e#6171#9332#0" />
-          </folding>
+        <state>
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ES.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="815" selection-start-line="815" selection-end-line="815" />
+        <state relative-caret-position="80">
+          <caret line="747" lean-forward="true" selection-start-line="747" selection-end-line="747" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#880#3160#0" />
@@ -532,6 +398,18 @@
             <element signature="e#16229#16860#0" />
             <element signature="e#16883#19628#0" />
             <element signature="e#19651#22005#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/es_grad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#4174#6141#0" />
+            <element signature="e#6171#9332#0" />
           </folding>
         </state>
       </provider>
